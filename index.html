@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>محمد نعمتی‌زاده | برنامه‌نویس وب</title>
+    <meta name="description" content="وب‌سایت شخصی محمد نعمتی‌زاده - برنامه‌نویس وب، طراح UI/UX و متخصص سئو" />
+    <meta name="theme-color" content="#f9a32c" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="محمد نعمتی‌زاده | برنامه‌نویس وب" />
+    <meta property="og:description" content="ساخت وب‌سایت‌های واکنش‌گرا و تجربه کاربری دلنشین" />
+    <meta property="og:image" content="image/profile.png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.com" />
+    <link rel="stylesheet" href="style.css">
+
+
+
+
+    <!-- فونت فارسی -->
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Lottie -->
+    <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container nav">
+            <div class="brand">👨‍💻 محمد نعمتی‌زاده</div>
+            <nav class="menu" aria-label="اصلی">
+                <a href="#services">خدمات</a>
+                <a href="#portfolio">نمونه‌کارها</a>
+                <a href="#contact">تماس با من</a>
+            </nav>
+            <div class="actions">
+                <button class="btn-icon" id="theme">🌙</button>
+                <button class="btn-icon burger" id="burger" aria-label="باز/بستن منو">☰</button>
+            </div>
+        </div>
+        <div class="mobile" id="mobile">
+            <a href="#services">خدمات</a>
+            <a href="#skills">مهارت‌ها</a>
+            <a href="#portfolio">نمونه‌کارها</a>
+            <a href="#contact">تماس</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="container hero">
+        <div class="reveal">
+            <h1 class="title" id="heroText"></h1>
+            <div class="cta">
+                <a class="btn" href="#contact">شروع همکاری</a>
+                <a class="btn outline" href="#portfolio">دیدن نمونه‌کارها</a>
+            </div>
+        </div>
+        <div class="avatar-wrap reveal" aria-hidden="true">
+            <div class="ring"></div>
+            <div class="avatar"><img src="image/my.png" alt="عکس پروفایل" loading="lazy" /></div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="section-head reveal">
+                <h2>خدمات من</h2>
+                <p>در این زمینه‌ها به رشد کسب‌وکار شما کمک می‌کنم 🚀</p>
+            </div>
+            <div class="grid">
+                <article class="card reveal">
+                    <div id="lottie-web" class="lottie"></div>
+                    <h3>طراحی و توسعه وب</h3>
+                    <p>پیاده‌سازی وب‌سایت‌های واکنش‌گرا با HTML, CSS, JavaScript و استانداردهای مدرن.</p>
+                </article>
+                <article class="card reveal">
+                    <div id="lottie-uiux" class="lottie"></div>
+                    <h3>طراحی UI/UX</h3>
+                    <p>طراحی رابط و تجربه کاربری خوش‌دست، دسترس‌پذیر و هماهنگ با برند.</p>
+                </article>
+                <article class="card reveal">
+                    <div id="lottie-seo" class="lottie"></div>
+                    <h3>سئو و بهینه‌سازی</h3>
+                    <p>بهبود سرعت، ساختار محتوا و سئوی فنی برای دیده‌شدن بهتر در نتایج جست‌وجو.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Portfolio -->
+    <section id="portfolio">
+        <div class="container">
+            <div class="section-head reveal">
+                <h2>نمونه‌کارها</h2>
+                <p>چند نمونه از پروژه‌هایی که با عشق و دقت انجام شده‌اند.</p>
+            </div>
+            <div class="work">
+                <a class="reveal" href="yummyplay.ir" aria-label="وب سایت یامی پلی"">
+                    <img src=" image/profile/Website Yumy Play.png" alt="پروژه فروشگاهی" loading="lazy" />
+                <div class="cap">برای بچه های بدغذای ساخت شده
+                    و با وردپرس پیداسازی شده
+                </div>
+                </a>
+                <a class="reveal" href="#" aria-label="وب سایت شمی کیهان آران ">
+                    <img src="image/profile/Websit Kyntradeco.png" alt="پروژه فروشگاهی" loading="lazy" />
+                    <div class="cap"> وب سایت فروشگاه در حوزه ساختمان ساخت شده با وردپرس</div>
+                </a>
+                <a class="reveal" href="#" aria-label="وب  سرویس تشخیص پلاک خودر">
+                    <img src="image/profile/Websit Plak AI.png" alt="پروژه فروشگاهی" loading="lazy" />
+                    <div class="cap">با متصل شدن به دوربین ها مداربسته میتوند تشخیص چهره انجام بدهد
+                        ساخت شده با django
+                    </div>
+                </a>
+                <a class="reveal" href="#" aria-label="وب سرویس تشخیص گل و گیاه">
+                    <img src="image/profile/Websit Plants AI.png" alt="پروژه فروشگاهی" loading="lazy" />
+                    <div class="cap"> این وب سرویس با پردازش تصویر برای تشخیص گل و کیاه هستش
+                        و ساخت شده با python و flask
+                    </div>
+                </a>
+                <a class="reveal" href="#" aria-label="وب سایت  تشخیص جهره">
+                    <img src="image/profile/Website AI Tool.png" alt="پروژه فروشگاهی" loading="lazy" />
+                    <div class="cap"> این وب سایت برای تشخیص چهره استفاده میشه
+                        و ساخت شده با flask , fastapi , python استفاده شده
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!-- Blog Section -->
+    <section id="blog">
+        <div class="container">
+            <div class="section-head reveal">
+                <h2>وبلاگ من</h2>
+                <p>آخرین مقالات و مطالب آموزشی در حوزه وب و طراحی تجربه کاربری.</p>
+            </div>
+            <div class="grid">
+                <article class="card reveal">
+                    <img src="image/3a0711269ca2d04921a5663fd030e8690173256173f8d9.jpg" alt="مقاله ۱"
+                        style="border-radius:12px;width:100%;height:180px;object-fit:cover;margin-bottom:12px" />
+                    <h3>چرا SEO برای موفقیت وب‌سایت شما حیاتی است؟</h3>
+                    <p>SEO یا بهینه‌سازی موتورهای جستجو، ابزاری قدرتمند برای دیده شدن وب‌سایت شماست. با استفاده از
+                        تکنیک‌های SEO، می‌توانید رتبه سایت خود را در نتایج گوگل ارتقا دهید</p>
+                    <a class="btn outline" href="#">ادامه مطلب →</a>
+                </article>
+                <article class="card reveal">
+                    <img src="image/1604747623MO-Blog-Template-1200-x-630-3-THINGS-TO-LOOK-FOR-WHEN-HIRING-A-WEB-DEVELOPER-FOR-YOUR-TEAM-20171013.png"
+                        alt="مقاله ۲"
+                        style="border-radius:12px;width:100%;height:180px;object-fit:cover;margin-bottom:12px" />
+                    <h3>طراحی سایت؛ ترکیبی از زیبایی و عملکرد</h3>
+                    <p>یک وب‌سایت موفق تنها به ظاهر جذاب محدود نمی‌شود. طراحی سایت شامل تجربه کاربری، ساختار مناسب
+                        صفحات، سرعت بارگذاری و پاسخگویی به دستگاه‌های مختلف است</p>
+                    <a class="btn outline" href="#">ادامه مطلب →</a>
+                </article>
+                <article class="card reveal">
+                    <img src="image/mceclip0.jpg" alt="مقاله ۳"
+                        style="border-radius:12px;width:100%;height:180px;object-fit:cover;margin-bottom:12px" />
+                    <h3>UI/UX؛ تجربه کاربری که کاربران عاشقش می‌شوند</h3>
+                    <p>UI (رابط کاربری) و UX (تجربه کاربری) دو ضلع مهم موفقیت هر وب‌سایت یا اپلیکیشن هستند. UI شامل
+                        طراحی بصری، رنگ‌ها، آیکون‌ها و فونت‌هاست، در حالی که UX تمرکز روی راحتی، سرعت و رضایت کاربر دارد
+                    </p>
+                    <a class="btn outline" href="#">ادامه مطلب →</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact & Social -->
+    <section id="contact">
+       
+
+        <section id="contact">
+            <div class="container contact" style="display:grid;/* grid-template-columns:1fr 1fr; */gap:30px;padding:40px 20px;">
+          
+          
+              <!-- Social Media -->
+              <div class="reveal" style="background:rgba(0,0,0,0.05); padding:30px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
+                <div class="section-head" style="text-align:right; margin-bottom:20px;">
+                  <h2>من را دنبال کنید</h2>
+                  <p>برای دیدن نمونه‌کارها و مطالب آموزشی در شبکه‌های اجتماعی.</p>
+                </div>
+                <div class="socials" style="display:flex; flex-direction:column; gap:16px;">
+                  <a href="https://www.instagram.com/code_with_mohammad/" target="_blank" class="btn outline" style="display:flex;align-items:center;gap:12px; padding:10px; border:1px solid #FFA545; border-radius:8px; color:#FFA545; text-decoration:none; font-weight:bold;">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width:20px;height:20px;"> اینستاگرام
+                  </a>
+                  <a href="https://www.linkedin.com/in/mohammadnematizade/" target="_blank" class="btn outline" style="display:flex;align-items:center;gap:12px; padding:10px; border:1px solid #0A66C2; border-radius:8px; color:#0A66C2; text-decoration:none; font-weight:bold;">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:20px;height:20px;"> لینکدین
+                  </a>
+                  <a href="https://github.com/MohamadNematizadeh" target="_blank" class="btn outline" style="display:flex;align-items:center;gap:12px; padding:10px; border:1px solid #171515; border-radius:8px; color:#171515; text-decoration:none; font-weight:bold;">
+                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="width:20px;height:20px;"> گیت‌هاب
+                  </a>
+                </div>
+              </div>
+            </div>
+          </section>
+          
+
+
+    <!-- Footer -->
+    <footer>
+        © 2025 محمد نعمتی‌زاده | همه حقوق محفوظ است
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
