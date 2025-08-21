@@ -1,209 +1,243 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>محمد نعمتی‌زاده | برنامه‌نویس وب</title>
-    <meta name="description" content="وب‌سایت شخصی محمد نعمتی‌زاده - برنامه‌نویس وب، طراح UI/UX و متخصص سئو" />
-    <meta name="theme-color" content="#f9a32c" />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="محمد نعمتی‌زاده | برنامه‌نویس وب" />
-    <meta property="og:description" content="ساخت وب‌سایت‌های واکنش‌گرا و تجربه کاربری دلنشین" />
-    <meta property="og:image" content="image/profile.png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://example.com" />
+    <title>Mohammad Nematizadeh | محمد نعمتی‌زاده</title>
+    <meta name="description"
+        content="Personal website of Mohammad Nematizadeh – Web Developer, UI/UX Designer & SEO Specialist" />
+    <meta name="theme-color" content="#f0c73c" />
+    <meta property="og:title" content="Mohammad Nematizadeh Portfolio" />
+    <meta property="og:description"
+        content="Explore the work of Mohammad Nematizadeh, a skilled Web Developer and UI/UX Designer." />
+    <link rel="preload" href="image/my.png" as="image" />
     <link rel="stylesheet" href="style.css">
 
+    <!-- Preload Critical Resources -->
+    <link rel="preload"
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        as="style" />
 
+    <link
+        href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet" media="print" onload="this.media='all'" />
 
-
-    <!-- فونت فارسی -->
-    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- Lottie -->
     <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
 </head>
 
 <body>
-    <!-- Header -->
+    <!-- Preloader -->
+    <div id="preloader"
+        style="position:fixed;top:0;left:0;width:100%;height:100%;background:var(--bg-dark);display:flex;justify-content:center;align-items:center;z-index:3000;opacity:1;transition:opacity 0.5s ease;">
+        <div
+            style="width:40px;height:40px;border:5px solid var(--yellow);border-top-color:var(--accent);border-radius:50%;animation:spin 1s linear infinite;">
+        </div>
+    </div>
+
     <header class="header">
         <div class="container nav">
-            <div class="brand">👨‍💻 محمد نعمتی‌زاده</div>
-            <nav class="menu" aria-label="اصلی">
-                <a href="#services">خدمات</a>
-                <a href="#portfolio">نمونه‌کارها</a>
-                <a href="#contact">تماس با من</a>
+            <div class="brand" data-fa="👨‍💻محمد نعمتی زاده" data-en="👨‍💻 Mohammad Nematizadeh">👨‍💻 Mohammad
+                Nematizadeh</div>
+            <nav class="menu" aria-label="Main Menu">
+                <a href="#services" data-en="Services" data-fa="خدمات"><i data-lucide="settings"></i> Services</a>
+                <a href="#portfolio" data-en="Portfolio" data-fa="نمونه کار"><i data-lucide="grid"></i> Portfolio</a>
+                <a href="#blog" data-en="Blog" data-fa="بلاگ"><i data-lucide="file-text"></i> Blog</a>
+                <a href="#contact" data-en="Contact" data-fa="تماس"><i data-lucide="mail"></i> Contact</a>
             </nav>
             <div class="actions">
-                <button class="btn-icon" id="theme">🌙</button>
-                <button class="btn-icon burger" id="burger" aria-label="باز/بستن منو">☰</button>
+                <button class="btn-icon" id="theme" title="Toggle Dark/Light" aria-label="Toggle Dark/Light Theme"><i
+                        data-lucide="moon"></i></button>
+                <button class="btn-icon" id="langBtn" title="Toggle Language" aria-label="Toggle Language"><i
+                        data-lucide="globe"></i> <span id="langLabel">EN</span></button>
+                <button class="btn-icon burger" id="burger" aria-label="Toggle Menu"><i data-lucide="menu"></i></button>
             </div>
         </div>
         <div class="mobile" id="mobile">
-            <a href="#services">خدمات</a>
-            <a href="#skills">مهارت‌ها</a>
-            <a href="#portfolio">نمونه‌کارها</a>
-            <a href="#contact">تماس</a>
+            <a href="#services" data-en="Services" data-fa="خدمات"><i data-lucide="settings"></i> Services</a>
+            <a href="#portfolio" data-en="Portfolio" data-fa="نمونه کار"><i data-lucide="grid"></i> Portfolio</a>
+            <a href="#blog" data-en="Blog" data-fa="بلاگ"><i data-lucide="file-text"></i> Blog</a>
+            <a href="#contact" data-en="Contact" data-fa="تماس"><i data-lucide="mail"></i> Contact</a>
         </div>
     </header>
 
     <!-- Hero -->
     <section class="container hero">
         <div class="reveal">
-            <h1 class="title" id="heroText"></h1>
+            <h1 class="title" data-en="Hi, I'm Mohammad Nematizadeh" data-fa="سلام، من محمد نعمتی‌زاده هستم">Hi, I'm
+                Mohammad Nematizadeh</h1>
+            <h3 data-en="👨‍💻 Web Developer & UI/UX Specialist" data-fa="👨‍💻 برنامه‌نویس وب و متخصص UI/UX">👨‍💻
+                Web Developer & UI/UX Specialist</h3>
             <div class="cta">
-                <a class="btn" href="#contact">شروع همکاری</a>
-                <a class="btn outline" href="#portfolio">دیدن نمونه‌کارها</a>
+                <a class="btn" href="#contact" data-en="Let's Work Together" data-fa="با هم کار کنیم"><i
+                        data-lucide="send"></i> Let's Work Together</a>
+                <a class="btn outline" href="#portfolio" data-en="View Portfolio" data-fa="مشاهده نمونه‌کارها"><i
+                        data-lucide="eye"></i> View Portfolio</a>
             </div>
         </div>
         <div class="avatar-wrap reveal" aria-hidden="true">
             <div class="ring"></div>
-            <div class="avatar"><img src="image/my.png" alt="عکس پروفایل" loading="lazy" /></div>
+            <div class="avatar"><img src="image/my.png" alt="Profile Picture" loading="eager" /></div>
         </div>
     </section>
 
+    <!-- Services -->
     <section id="services">
         <div class="container">
             <div class="section-head reveal">
-                <h2>خدمات من</h2>
-                <p>در این زمینه‌ها به رشد کسب‌وکار شما کمک می‌کنم 🚀</p>
+                <h2 data-en="Services" data-fa="خدمات">Services</h2>
+                <p data-en="Helping your business grow 🚀" data-fa="در این زمینه‌ها به رشد کسب‌وکار شما کمک می‌کنم 🚀">
+                    Helping your business grow 🚀</p>
             </div>
             <div class="grid">
                 <article class="card reveal">
                     <div id="lottie-web" class="lottie"></div>
-                    <h3>طراحی و توسعه وب</h3>
-                    <p>پیاده‌سازی وب‌سایت‌های واکنش‌گرا با HTML, CSS, JavaScript و استانداردهای مدرن.</p>
+
+                    <h3 data-fa="طراحی و توسعه وب" data-en="Websit Development"><i data-lucide="code"></i> Websit
+                        Development</h3>
+
+                    <p data-en="Responsive websites with HTML, CSS, JS, and modern standards."
+                        data-fa="طراحی وب‌سایت‌های پاسخ‌گو با HTML، CSS، JS و استانداردهای مدرن.">Responsive websites
+                        with HTML, CSS, JS, and modern standards.</p>
                 </article>
                 <article class="card reveal">
                     <div id="lottie-uiux" class="lottie"></div>
-                    <h3>طراحی UI/UX</h3>
-                    <p>طراحی رابط و تجربه کاربری خوش‌دست، دسترس‌پذیر و هماهنگ با برند.</p>
+
+                    <h3 data-fa="طراحی UI/UX
+" data-en="UI/UX Design"><i data-lucide="layout"></i> UI/UX Design</h3>
+                    <p data-en="User-friendly and brand-consistent interfaces."
+                        data-fa="رابط‌های کاربری کاربرپسند و هماهنگ با برند.">User-friendly and brand-consistent
+                        interfaces.</p>
                 </article>
                 <article class="card reveal">
                     <div id="lottie-seo" class="lottie"></div>
-                    <h3>سئو و بهینه‌سازی</h3>
-                    <p>بهبود سرعت، ساختار محتوا و سئوی فنی برای دیده‌شدن بهتر در نتایج جست‌وجو.</p>
+
+                    <h3 data-fa="سئو و بهینه‌سازی
+" data-en="SEO & Optimization"><i data-lucide="trending-up"></i> SEO & Optimization</h3>
+                    <p data-en="Improve speed, content structure, and technical SEO."
+                        data-fa="بهبود سرعت، ساختار محتوا و سئوی فنی.">Improve speed, content structure, and technical
+                        SEO.</p>
                 </article>
             </div>
         </div>
     </section>
-
 
     <!-- Portfolio -->
     <section id="portfolio">
         <div class="container">
             <div class="section-head reveal">
-                <h2>نمونه‌کارها</h2>
-                <p>چند نمونه از پروژه‌هایی که با عشق و دقت انجام شده‌اند.</p>
+                <h2 data-en="Portfolio" data-fa="نمونه کار">Portfolio</h2>
+                <p data-en="Some projects done with love and precision."
+                    data-fa="برخی از پروژه‌های انجام شده با عشق و دقت.">Some projects done with love and precision.</p>
             </div>
             <div class="work">
-                <a class="reveal" href="yummyplay.ir" aria-label="وب سایت یامی پلی"">
-                    <img src=" image/profile/Website Yumy Play.png" alt="پروژه فروشگاهی" loading="lazy" />
-                <div class="cap">برای بچه های بدغذای ساخت شده
-                    و با وردپرس پیداسازی شده
-                </div>
+                <a href="https://example.com/yummy-play" class="reveal" target="_blank">
+                    <picture>
+                        <img src="image/profile/Website Yumy Play.png" alt="Yummy Play Project" loading="eager" />
+                    </picture>
+                    <div class="cap" data-en="A project for picky kids using WordPress"
+                        data-fa="پروژه‌ای برای کودکان سخت‌پسند با استفاده از وردپرس">A project for picky kids using
+                        WordPress</div>
                 </a>
-                <a class="reveal" href="#" aria-label="وب سایت شمی کیهان آران ">
-                    <img src="image/profile/Websit Kyntradeco.png" alt="پروژه فروشگاهی" loading="lazy" />
-                    <div class="cap"> وب سایت فروشگاه در حوزه ساختمان ساخت شده با وردپرس</div>
+                <a href="https://example.com/kyntradeco" class="reveal" target="_blank">
+                    <picture>
+                        <img src="image/profile/Websit Kyntradeco.png" alt="Kyntradeco Project" loading="eager" />
+                    </picture>
+                    <div class="cap" data-en="Construction store website using WordPress"
+                        data-fa="وب‌سایت فروشگاه ساختمانی با استفاده از وردپرس">Construction store website using
+                        WordPress</div>
                 </a>
-                <a class="reveal" href="#" aria-label="وب  سرویس تشخیص پلاک خودر">
-                    <img src="image/profile/Websit Plak AI.png" alt="پروژه فروشگاهی" loading="lazy" />
-                    <div class="cap">با متصل شدن به دوربین ها مداربسته میتوند تشخیص چهره انجام بدهد
-                        ساخت شده با django
-                    </div>
+                <a href="https://example.com/plak-ai" class="reveal" target="_blank">
+                    <picture>
+                        <img src="image/profile/Websit Plak AI.png" alt="License Plate Detection" loading="eager" />
+                    </picture>
+                    <div class="cap" data-en="AI license plate detection with Django"
+                        data-fa="تشخیص پلاک خودرو با هوش مصنوعی و جنگو">AI license plate detection with Django</div>
                 </a>
-                <a class="reveal" href="#" aria-label="وب سرویس تشخیص گل و گیاه">
-                    <img src="image/profile/Websit Plants AI.png" alt="پروژه فروشگاهی" loading="lazy" />
-                    <div class="cap"> این وب سرویس با پردازش تصویر برای تشخیص گل و کیاه هستش
-                        و ساخت شده با python و flask
-                    </div>
-                </a>
-                <a class="reveal" href="#" aria-label="وب سایت  تشخیص جهره">
-                    <img src="image/profile/Website AI Tool.png" alt="پروژه فروشگاهی" loading="lazy" />
-                    <div class="cap"> این وب سایت برای تشخیص چهره استفاده میشه
-                        و ساخت شده با flask , fastapi , python استفاده شده
-                    </div>
-                </a>
-
             </div>
         </div>
     </section>
-    <!-- Blog Section -->
+
+    <!-- Blog -->
     <section id="blog">
         <div class="container">
             <div class="section-head reveal">
-                <h2>وبلاگ من</h2>
-                <p>آخرین مقالات و مطالب آموزشی در حوزه وب و طراحی تجربه کاربری.</p>
+                <h2 data-en="Blog" data-fa="بلاگ">Blog</h2>
+                <p data-en="Latest articles about Web Development & UI/UX"
+                    data-fa="آخرین مقالات درباره توسعه وب و UI/UX">Latest articles about Web Development & UI/UX</p>
             </div>
             <div class="grid">
                 <article class="card reveal">
-                    <img src="image/3a0711269ca2d04921a5663fd030e8690173256173f8d9.jpg" alt="مقاله ۱"
-                        style="border-radius:12px;width:100%;height:180px;object-fit:cover;margin-bottom:12px" />
-                    <h3>چرا SEO برای موفقیت وب‌سایت شما حیاتی است؟</h3>
-                    <p>SEO یا بهینه‌سازی موتورهای جستجو، ابزاری قدرتمند برای دیده شدن وب‌سایت شماست. با استفاده از
-                        تکنیک‌های SEO، می‌توانید رتبه سایت خود را در نتایج گوگل ارتقا دهید</p>
-                    <a class="btn outline" href="#">ادامه مطلب →</a>
+                    <picture>
+                        <img src="image/1604747623MO-Blog-Template-1200-x-630-3-THINGS-TO-LOOK-FOR-WHEN-HIRING-A-WEB-DEVELOPER-FOR-YOUR-TEAM-20171013.png"
+                            alt="SEO Article" loading="eager" />
+                    </picture>
+                    <h3><i data-lucide="trending-up"></i> Why SEO is Crucial for Website Success</h3>
+                    <p data-en="SEO improves visibility and ranking in search engines."
+                        data-fa="سئو باعث بهبود دیده شدن و رتبه‌بندی در موتورهای جستجو می‌شود.">SEO improves visibility
+                        and ranking in search engines.</p>
                 </article>
                 <article class="card reveal">
-                    <img src="image/1604747623MO-Blog-Template-1200-x-630-3-THINGS-TO-LOOK-FOR-WHEN-HIRING-A-WEB-DEVELOPER-FOR-YOUR-TEAM-20171013.png"
-                        alt="مقاله ۲"
-                        style="border-radius:12px;width:100%;height:180px;object-fit:cover;margin-bottom:12px" />
-                    <h3>طراحی سایت؛ ترکیبی از زیبایی و عملکرد</h3>
-                    <p>یک وب‌سایت موفق تنها به ظاهر جذاب محدود نمی‌شود. طراحی سایت شامل تجربه کاربری، ساختار مناسب
-                        صفحات، سرعت بارگذاری و پاسخگویی به دستگاه‌های مختلف است</p>
-                    <a class="btn outline" href="#">ادامه مطلب →</a>
-                </article>
-                <article class="card reveal">
-                    <img src="image/mceclip0.jpg" alt="مقاله ۳"
-                        style="border-radius:12px;width:100%;height:180px;object-fit:cover;margin-bottom:12px" />
-                    <h3>UI/UX؛ تجربه کاربری که کاربران عاشقش می‌شوند</h3>
-                    <p>UI (رابط کاربری) و UX (تجربه کاربری) دو ضلع مهم موفقیت هر وب‌سایت یا اپلیکیشن هستند. UI شامل
-                        طراحی بصری، رنگ‌ها، آیکون‌ها و فونت‌هاست، در حالی که UX تمرکز روی راحتی، سرعت و رضایت کاربر دارد
-                    </p>
-                    <a class="btn outline" href="#">ادامه مطلب →</a>
+                    <picture>
+                        <img src="image/3a0711269ca2d04921a5663fd030e8690173256173f8d9.jpg" alt="UI/UX Tips"
+                            loading="eager" />
+                    </picture>
+                    <h3><i data-lucide="layout"></i> Top 10 UI/UX Tips for Modern Websites</h3>
+                    <p data-en="Design user-friendly and interactive interfaces."
+                        data-fa="طراحی رابط‌های کاربری کاربرپسند و تعاملی.">Design user-friendly and interactive
+                        interfaces.</p>
                 </article>
             </div>
         </div>
     </section>
 
-
-    <!-- Contact & Social -->
+    <!-- Contact -->
     <section id="contact">
-       
-
-        <section id="contact">
-            <div class="container contact" style="display:grid;/* grid-template-columns:1fr 1fr; */gap:30px;padding:40px 20px;">
-          
-          
-              <!-- Social Media -->
-              <div class="reveal" style="background:rgba(0,0,0,0.05); padding:30px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.05);">
-                <div class="section-head" style="text-align:right; margin-bottom:20px;">
-                  <h2>من را دنبال کنید</h2>
-                  <p>برای دیدن نمونه‌کارها و مطالب آموزشی در شبکه‌های اجتماعی.</p>
-                </div>
-                <div class="socials" style="display:flex; flex-direction:column; gap:16px;">
-                  <a href="https://www.instagram.com/code_with_mohammad/" target="_blank" class="btn outline" style="display:flex;align-items:center;gap:12px; padding:10px; border:1px solid #FFA545; border-radius:8px; color:#FFA545; text-decoration:none; font-weight:bold;">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" style="width:20px;height:20px;"> اینستاگرام
-                  </a>
-                  <a href="https://www.linkedin.com/in/mohammadnematizade/" target="_blank" class="btn outline" style="display:flex;align-items:center;gap:12px; padding:10px; border:1px solid #0A66C2; border-radius:8px; color:#0A66C2; text-decoration:none; font-weight:bold;">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" style="width:20px;height:20px;"> لینکدین
-                  </a>
-                  <a href="https://github.com/MohamadNematizadeh" target="_blank" class="btn outline" style="display:flex;align-items:center;gap:12px; padding:10px; border:1px solid #171515; border-radius:8px; color:#171515; text-decoration:none; font-weight:bold;">
-                    <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg" alt="GitHub" style="width:20px;height:20px;"> گیت‌هاب
-                  </a>
-                </div>
-              </div>
+        <div class="container">
+            <div class="section-head reveal">
+                <h2 data-en="Contact" data-fa="تماس">Contact</h2>
+                <p data-en="Let's get in touch!" data-fa="بیایید در تماس باشیم!">Let's get in touch!</p>
             </div>
-          </section>
-          
+            <div class="grid">
+                <article class="card reveal">
+                    <h3><i class="fas fa-envelope"></i> Send a Message</h3>
+                    <form action="https://formspree.io/f/your-form-id" method="POST">
+                        <input type="text" name="name" placeholder="Your Name" required aria-label="Your Name" />
+                        <input type="email" name="email" placeholder="Your Email" required aria-label="Your Email" />
+                        <textarea name="message" placeholder="Your Message" required
+                            aria-label="Your Message"></textarea>
+                        <button type="submit" class="btn"><i class="fas fa-paper-plane"></i> Send</button>
+                    </form>
+                </article>
+                <article class="card reveal">
+                    <h3><i class="fas fa-phone-alt"></i>
+                        Call Me</h3>
+                    <p><a href="tel:+1234567890" data-en="+1 234 567 890" data-fa="+۱ ۲۳۴ ۵۶۷ ۸۹۰">+1 234 567 890</a>
+                    </p>
+                </article>
+                <article class="card reveal">
+                    <h3><i class="fas fa-users"></i> Follow Me</h3>
+                    <div class="socials">
+                        <a href="https://linkedin.com/in/mohammadnematizadeh" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
 
+                        </a>
+                        <a href="https://instagram.com/mohammad.nematizadeh" target="_blank" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i></a>
+                        <a href="https://youtube.com/@yourchannel" target="_blank" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
 
-    <!-- Footer -->
     <footer>
-        © 2025 محمد نعمتی‌زاده | همه حقوق محفوظ است
+        <p data-en="&copy; 2025 Mohammad Nematizadeh. All rights reserved."
+            data-fa="&copy; ۱۴۰۴ محمد نعمتی‌زاده. تمامی حقوق محفوظ است.">&copy; 2025 Mohammad Nematizadeh. All rights
+            reserved.</p>
     </footer>
 
     <script src="script.js"></script>
